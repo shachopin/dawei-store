@@ -15,4 +15,4 @@
 /log/*.log
 /tmp
 
-**/DB_Store
+**/.DB_Store
