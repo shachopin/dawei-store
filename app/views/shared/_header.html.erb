@@ -2,22 +2,19 @@
 <div id="sidr">
   <ul>  
     <li>
-    <%= link_to '#', class: "side-logo" do %>
-      MyStore
-      <span class="logo-dot accent-bg"></span>
-    <% end %>
+      <%= link_to root_path, class: "side-logo" do %>
+        Chair<span class="logo-dot accent-bg"></span>
+      <% end %>
     </li>
-    <li class="active">
-      <%= link_to "Chair", root_path %>
-    </li>
+    <li class="active"><a href="#">Modern Chairs</a></li>
+    <li><a href="#">Sofas</a></li>
+    <li><a href="#">Handmade</a></li>
+    <li><a href="#">Industrial</a></li>
+    <li><a href="#">For office</a></li>
     <li class="divider"><span></span></li>
-    <li>
-      <%= link_to "Privacy", root_path %>
-    </li>
-    <li>
-      <%= link_to "Terms & conditions", root_path %>
-    <li>
-    
+    <li><a href="./privacy.html">Privacy</a></li>
+    <li><a href="./terms.html">Terms & conditions</a></li>
+    <li><a href="./404.html">404 Error</a></li>
   </ul>
 
   <div class="side-social">
