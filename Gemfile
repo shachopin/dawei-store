@@ -20,6 +20,7 @@ gem "font-awesome-rails"
 gem 'paperclip'
 gem 'activeadmin', '~> 1.0.0.pre4'
 gem 'devise'
+gem 'toastr-rails'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'

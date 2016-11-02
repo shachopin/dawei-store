@@ -1,6 +1,6 @@
 <header class="secondary">
   <div class="background-image-holder parallax-background overlay" data-stellar-background-ratio="0.9">
-    <img class="background-image" alt="Background Image" src="images/1600x900.png">
+    <%= image_tag("1600x900.png", class: "background-image", alt: "Background Image") %>
   </div>
 
   <div class="container align-vertical hero">
@@ -18,13 +18,14 @@
     <div class="col-md-12">
       <h2>Carts Details</h2>
       <br>
-      <% @cart.product_items.each do |item| %>
-        <ul>
-          <li>
-            <%= item.quantity %>&times;<%= item.product.title %>
-          </li>
-        </ul>
-      <% end %>
+      <%= render 'carts/cart' %>
+      <br>
+      <h5>Total: <%= number_to_currency @cart.total_price %></h5>
+      <br>
+      <%= link_to 'Back to Store', shop_path %>
+      <br>
+      <%= link_to 'Empty Your Cart', @cart, method: :delete, data: {confirm: 'You sure?'} %>
+
     </div>
   </div>
 </section>

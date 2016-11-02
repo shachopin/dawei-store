@@ -1,6 +1,6 @@
 <header class="secondary">
   <div class="background-image-holder parallax-background overlay" data-stellar-background-ratio="0.9">
-    <img class="background-image" alt="Background Image" src="images/1600x900.png">
+    <%= image_tag("1600x900.png", class: "background-image", alt: "Background Image") %>
   </div>
 
   <div class="container align-vertical hero">
@@ -30,8 +30,11 @@
                 <h2 class="product-title"><%= product.title %></h2>
                 <p class="product-price"><%= number_to_currency product.price %></p>
                 <p><%= product.description %></p>
+                <%= button_to product_items_path(product_id: product), class: 'btn btn-default' do %>
+                  <i class="fa fa-shopping-cart"></i> Add to cart
+                <% end %>
 
-                <a href="#" class="btn btn-default"><i class="fa fa-shopping-cart"></i> Add to cart</a>
+                <!--a href="#" class="btn btn-default"><i class="fa fa-shopping-cart"></i> Add to cart</a-->
               </div>
             </div>
           </div>
